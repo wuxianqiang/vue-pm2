@@ -8,7 +8,8 @@
     "lint": "vue-cli-service lint",
     "deploy:production": "pm2 deploy ecosystem.config.js production",
     "deploy:dev": "pm2 deploy ecosystem.config.js dev",
-    "deploy:setup": "pm2 deploy ecosystem.config.js dev setup"
+    "setup:production": "pm2 deploy ecosystem.config.js production setup",
+    "setup:dev": "pm2 deploy ecosystem.config.js dev setup"
   },
   "dependencies": {
     "core-js": "^3.3.2",

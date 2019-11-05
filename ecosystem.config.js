@@ -9,6 +9,7 @@ module.exports = {
     {
       name      : 'API',
       script    : 'app.js',
+      append_env_to_name: true,
       env: {
         COMMON_VARIABLE: 'true'
       },
