@@ -18,10 +18,10 @@ module.exports = {
     },
 
     // Second application
-    {
-      name      : 'WEB',
-      script    : 'web.js'
-    }
+    // {
+    //   name      : 'WEB',
+    //   script    : 'web.js'
+    // }
   ],
 
   /**
@@ -30,20 +30,20 @@ module.exports = {
    */
   deploy : {
     production : {
-      user : 'node',
+      user : 'root',
       host : '192.168.4.90',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
+      repo : 'git@github.com:wuxianqiang/vue-pm2.git',
       path : '/var/www/production',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
-      user : 'node',
+      user : 'root',
       host : '192.168.4.90',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
+      repo : 'git@github.com:wuxianqiang/vue-pm2.git',
       path : '/var/www/development',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
+      'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js --env dev',
       env  : {
         NODE_ENV: 'dev'
       }
