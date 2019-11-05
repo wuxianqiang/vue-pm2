@@ -36,7 +36,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:wuxianqiang/vue-pm2.git',
       path : '/var/www/production',
-      'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'git pull && npm install && npm run build && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
       user : 'root',
@@ -44,7 +44,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:wuxianqiang/vue-pm2.git',
       path : '/var/www/development',
-      'post-deploy' : 'npm install && npm run build && pm2 reload ecosystem.config.js --env dev',
+      'post-deploy' : 'git pull && npm install && npm run build && pm2 reload ecosystem.config.js --env dev',
       env  : {
         NODE_ENV: 'dev'
       }
