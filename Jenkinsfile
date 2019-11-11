@@ -5,13 +5,12 @@ node {
     stage('build') {
         nodejs('NodeJs11.14.0'){
             sh 'yarn install'
-            sh 'yarn build'
         }
     }
     stage('deploy') {
         nodejs('NodeJs11.14.0'){
             sh 'npm install pm2 -g'
-            sh 'pm2 list'
+            sh 'npm run deploy:production'
         }
     }
 }
