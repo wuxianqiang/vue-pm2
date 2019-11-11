@@ -32,7 +32,7 @@ module.exports = {
   deploy : {
     production : {
       user : 'root',
-      host : '192.168.4.90',
+      host : '192.168.4.88',
       ref  : 'origin/master',
       repo : 'git@github.com:wuxianqiang/vue-pm2.git',
       path : '/var/www/production',
@@ -40,7 +40,7 @@ module.exports = {
     },
     dev : {
       user : 'root',
-      host : '192.168.4.90',
+      host : '192.168.4.88',
       ref  : 'origin/master',
       repo : 'git@github.com:wuxianqiang/vue-pm2.git',
       path : '/var/www/development',
