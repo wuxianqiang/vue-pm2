@@ -10,6 +10,7 @@ node {
     }
     stage('deploy') {
         nodejs('NodeJs11.14.0'){
+            sh 'yarn add pm2 -g'
             sh 'pm2 reload ecosystem.config.js --env production'
         }
     }
